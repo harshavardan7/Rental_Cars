@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | RENTAL</title>
+    <style>
+        body {
+          font-family: 'Arial', sans-serif;
+          /* background: linear-gradient(to right, #6A82FB, #FC5C7D); */
+          /* display: flex;  */
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+        }
+        .form-container {
+          background: #fff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+          max-width: 400px;
+          width: 100%;
+        }
+        h2 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .form__group {
+          margin-bottom: 15px;
+        }
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          outline: none;
+          transition: border-color 0.3s;
+        }
+        input:focus {
+          border-color: #6A82FB;
+        }
+        .btn {
+          width: 100%;
+          padding: 10px;
+          background-color: #6A82FB;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+        .btn:hover {
+          background-color: #FC5C7D;
+        }
+        p {
+          text-align: center;
+          margin-top: 10px;
+        }
+        p a {
+          color: #6A82FB;
+        }
+        .form-feedback {
+          color: red;
+          font-size: 14px;
+          display: none;
+        }
+      </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#">RENTAL_CARS</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rent.html">Rent</a></li>
+          <li><a href="ride.html">Ride</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+        
+      </nav>
+      <center>
+      <div class="form-container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+          <div class="form__group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div class="form-feedback" id="email-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="form__group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div class="form-feedback" id="password-feedback">Password cannot be empty.</div>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </form>
+      </div>
+    </center>
+      
+       
+        <script>
+          // Real-time form validation
+          document.getElementById('email').addEventListener('input', function() {
+            const emailFeedback = document.getElementById('email-feedback');
+            if (this.value.includes('@')) {
+              emailFeedback.style.display = 'none';
+            } else {
+              emailFeedback.style.display = 'block';
+            }
+          });
+          document.getElementById('password').addEventListener('input', function() {
+            const passwordFeedback = document.getElementById('password-feedback');
+            if (this.value.length > 0) {
+              passwordFeedback.style.display = 'none';
+            } else {
+              passwordFeedback.style.display = 'block';
+            }
+          });
+        </script>
+        <br>    <br>    <br>
+        <footer>
+            <div class="section__container footer__container" >
+              <div class="footer__col">
+                <h4>Resources</h4>
+                <ul class="footer__links">
+                  <li><a href="#">Installation Manual</a></li>
+                  <li><a href="#">Release Note</a></li>
+                  <li><a href="#">Community Help</a></li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <h4>Company</h4>
+                <ul class="footer__links">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Career</a></li>
+                  <li><a href="#">Press</a></li>
+                  <li><a href="#">Support</a></li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <h4>Product</h4>
+                <ul class="footer__links">
+                  <li><a href="#">Demo</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Features</a></li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <h4>Follow Us</h4>
+                <ul class="footer__socials">
+                  <li>
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__bar">
+              Copyright © RENTAL_CARS. All rights reserved.
+            </div>
+          </footer>
+      
+          <script src="https://unpkg.com/scrollreveal"></script>
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          <script src="main.js"></script>
+        </body>
+      </html>
+      
